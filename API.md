@@ -38,18 +38,13 @@ Content-Type: application/json
 **请求体:**
 ```json
 {
-  "markdown": "# Hello World\n\nThis is **bold** text.",
-  "title": "可选标题",
-  "author": "可选作者"
+  "markdown": "# Hello World\n\nThis is **bold** text."
 }
 ```
 
 | 字段 | 类型 | 必填 | 说明 |
 |-------|------|------|------|
 | markdown | string | 是 | 要转换的 Markdown 文本（最大 5MB） |
-| title | string | 否 | 可选的文章标题 |
-| author | string | 否 | 可选的作者名称 |
-| template | string | 否 | 保留字段，供将来使用 |
 
 **响应 (200 OK):**
 ```json
@@ -58,8 +53,6 @@ Content-Type: application/json
   "data": {
     "html": "<section>...</section>",
     "meta": {
-      "title": "可选标题",
-      "author": "可选作者",
       "timestamp": 1703920800000
     }
   }
@@ -150,8 +143,7 @@ Content-Type: application/json
 curl -X POST http://localhost:3000/api/convert/wechat \
   -H "Content-Type: application/json" \
   -d '{
-    "markdown": "# Hello World\n\nThis is **bold** text.",
-    "title": "My Article"
+    "markdown": "# Hello World\n\nThis is **bold** text."
   }'
 ```
 
@@ -161,8 +153,7 @@ const response = await fetch('http://localhost:3000/api/convert/wechat', {
   method: 'POST',
   headers: { 'Content-Type': 'application/json' },
   body: JSON.stringify({
-    markdown: '# Hello World\n\nThis is **bold** text.',
-    title: 'My Article'
+    markdown: '# Hello World\n\nThis is **bold** text.'
   })
 });
 const data = await response.json();
@@ -174,8 +165,7 @@ console.log(data.data.html);
 import requests
 
 response = requests.post('http://localhost:3000/api/convert/wechat', json={
-    'markdown': '# Hello World\n\nThis is **bold** text.',
-    'title': 'My Article'
+    'markdown': '# Hello World\n\nThis is **bold** text.'
 })
 data = response.json()
 print(data['data']['html'])
@@ -185,33 +175,20 @@ print(data['data']['html'])
 
 ### 安装依赖
 
-使用 pnpm（推荐）：
 ```bash
 pnpm install
-```
-
-使用 npm：
-```bash
-npm install
 ```
 
 ### 启动服务
 
 ```bash
-# pnpm
 pnpm start
-
-# npm
-npm start
 ```
 
 开发模式（自动重载）：
-```bash
-# pnpm
-pnpm dev
 
-# npm
-npm run dev
+```bash
+pnpm dev
 ```
 
 服务默认运行在端口 3000（可通过 `PORT` 环境变量配置）。

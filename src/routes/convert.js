@@ -17,10 +17,7 @@ router.post('/wechat',
       .notEmpty()
       .withMessage('markdown field is required and cannot be empty')
       .isLength({ max: 5000000 })
-      .withMessage('markdown content exceeds 5MB limit'),
-    body('title').optional().isString(),
-    body('author').optional().isString(),
-    body('template').optional().isString()
+      .withMessage('markdown content exceeds 5MB limit')
   ],
   async (req, res) => {
     // Validate input
@@ -37,18 +34,16 @@ router.post('/wechat',
     }
 
     try {
-      const { markdown, title, author } = req.body;
+      const { markdown } = req.body;
 
       // Convert markdown to WeChat HTML
-      const result = await convertMarkdownToWeChat(markdown, { title, author });
+      const result = await convertMarkdownToWeChat(markdown);
 
       res.json({
         success: true,
         data: {
           html: result.html,
           meta: {
-            title: title || '',
-            author: author || '',
             timestamp: Date.now()
           }
         }

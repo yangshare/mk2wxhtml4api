@@ -172,9 +172,12 @@ export async function convertMarkdownToWeChat(markdown, options = {}) {
 
   // Apply WeChat inline styles to HTML elements
   const styledHtml = applyWeChatStyles(sanitizedHtml);
+  
+  // Remove newlines to make HTML compact
+  const compactHtml = styledHtml.replace(/\n/g, '');
 
   const result = {
-    html: styledHtml
+    html: compactHtml
   };
 
   // Cache the result

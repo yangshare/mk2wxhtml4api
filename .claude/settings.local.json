@@ -72,7 +72,18 @@
       "Bash(node --test:*)",
       "Bash(node:*)",
       "Bash(python:*)",
-      "Bash(openspec-cn archive:*)"
+      "Bash(openspec-cn archive:*)",
+      "Bash(netstat:*)",
+      "Bash(taskkill:*)",
+      "Bash(cmd /c \"taskkill /PID 4980 /F\")",
+      "Bash(powershell -Command \"Stop-Process -Id 4980 -Force\")",
+      "Bash(set PORT=3001:*)",
+      "Bash(powershell:*)",
+      "Bash(cmd /c \"taskkill /PID 36000 /F\")",
+      "Bash(PORT=3001 pnpm start:*)",
+      "Bash(cmd /c \"taskkill /PID 36000 /F && timeout /t 1 >nul && netstat -ano | findstr :3000\")",
+      "Bash(powershell.exe:*)",
+      "Bash(cmd /c \"taskkill /PID 2264 /F\")"
     ]
   }
 }

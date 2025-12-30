@@ -16,33 +16,20 @@ Markdown 转微信公众号 HTML 的 API 服务
 
 ### 安装依赖
 
-使用 pnpm（推荐）：
+使用 pnpm：
 ```bash
 pnpm install
-```
-
-使用 npm：
-```bash
-npm install
 ```
 
 ### 启动服务
 
 ```bash
-# pnpm
 pnpm start
-
-# npm
-npm start
 ```
 
 开发模式（自动重载）：
 ```bash
-# pnpm
 pnpm dev
-
-# npm
-npm run dev
 ```
 
 服务默认运行在 `http://localhost:3000`
@@ -55,9 +42,7 @@ npm run dev
 curl -X POST http://localhost:3000/api/convert/wechat \
   -H "Content-Type: application/json" \
   -d '{
-    "markdown": "# 标题\n\n这是**粗体**文字。",
-    "title": "文章标题",
-    "author": "作者"
+    "markdown": "# 标题\n\n这是**粗体**文字。"
   }'
 ```
 
@@ -68,8 +53,6 @@ curl -X POST http://localhost:3000/api/convert/wechat \
   "data": {
     "html": "<section>...</section>",
     "meta": {
-      "title": "文章标题",
-      "author": "作者",
       "timestamp": 1703920800000
     }
   }
