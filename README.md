@@ -2,6 +2,11 @@
 
 Markdown 转微信公众号 HTML 的 API 服务
 
+> 大致效果：
+> 
+> <img width="746" height="892" alt="image" src="https://github.com/user-attachments/assets/67a203b9-6700-4874-9191-e7d5a1277102" />
+
+
 ## 功能特点
 
 - ✅ 将 Markdown 文本转换为微信公众号适配的 HTML
