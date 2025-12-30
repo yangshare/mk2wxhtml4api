@@ -1,0 +1,27 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:github.com)",
+      "WebSearch",
+      "Bash(pip install git+https://github.com/studyzy/OpenSpec-cn.git)",
+      "Bash(git clone https://github.com/studyzy/OpenSpec-cn.git openspec-cn)",
+      "Bash(cat README.md)",
+      "Bash(node --version)",
+      "Bash(npm --version)",
+      "Bash(npm install)",
+      "Bash(npm run build)",
+      "Bash(npm install -g @studyzy/openspec-cn@latest)",
+      "Bash(openspec-cn --version)",
+      "Bash(openspec-cn init)",
+      "Bash(openspec-cn init --help)",
+      "Bash(openspec-cn init --tools claude,codex,github-copilot,cursor)",
+      "Bash(tree openspec/)",
+      "Bash(openspec-cn list)",
+      "Bash(openspec-cn view)",
+      "Bash(openspec-cn list --specs)",
+      "Bash(openspec-cn list --changes)",
+      "Skill(openspec:proposal)",
+      "Bash(claude /logout)"
+    ]
+  }
+}

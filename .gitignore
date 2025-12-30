@@ -1,0 +1,50 @@
+# Operating System Files
+.DS_Store
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Editor Directories and Files
+.idea/
+.vscode/
+!.vscode/extensions.json
+!.vscode/launch.json
+!.vscode/tasks.json
+!.vscode/settings.json
+*.sublime-project
+*.sublime-workspace
+*.swp
+*.swo
+
+# Local Configuration
+.env
+.env.local
+.env.*.local
+config.local.json
+
+# Dependency Directories (Common)
+node_modules/
+jspm_packages/
+bower_components/
+.venv/
+env/
+venv/
+__pycache__/
+*.py[cod]
+
+# Build Outputs (Common)
+dist/
+build/
+out/
+coverage/
+.next/
+.nuxt/
+.cache/
+tmp/
