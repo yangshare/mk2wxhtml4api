@@ -96,7 +96,9 @@
       "Bash(docker-compose up:*)",
       "Bash(docker compose up:*)",
       "Bash(docker compose:*)",
-      "Bash(cmd /c:*)"
+      "Bash(cmd /c:*)",
+      "mcp__serena__onboarding",
+      "mcp__serena__write_memory"
     ]
   }
 }
