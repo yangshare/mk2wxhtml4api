@@ -32,7 +32,6 @@
       "Bash(if [ -d \"openspec\" ])",
       "Bash(then ls -la openspec)",
       "Bash(else echo \"无openspec目录\")",
-      "Bash(mkdir -p E:开源项目makedown转htmlmakedown2htmlmk2wxhtml4apiopenspecchangesadd-wechat-conversion-apispecswechat-apiapi)",
       "Bash(openspec-cn validate add-wechat-conversion-api --strict)",
       "Bash(openspec-cn change show add-wechat-conversion-api --json --deltas-only)",
       "Bash(if [ -f \"openspec/changes\" ])",
@@ -96,7 +95,8 @@
       "Bash(docker rm:*)",
       "Bash(docker-compose up:*)",
       "Bash(docker compose up:*)",
-      "Bash(docker compose:*)"
+      "Bash(docker compose:*)",
+      "Bash(cmd /c:*)"
     ]
   }
 }
